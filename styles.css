@@ -41,3 +41,13 @@ footer{border-top:1px solid var(--line);padding:26px 24px}.footer-inner{max-widt
  .card-grid,.menu-grid,.plan-grid,.steps,.gallery{grid-template-columns:1fr}.gallery img{height:300px}.section-head{display:block}.section-head p{margin-top:10px}
  .btn-row .btn{width:100%}.contact-wrap{grid-template-columns:90px 1fr}.contact-wrap img{width:90px}
 }
+
+/* 單一加盟方案 */
+.plan-grid.single{grid-template-columns:minmax(0,720px)}
+.plan.featured{padding:32px;border-color:var(--aqua);box-shadow:var(--shadow)}
+.plan.featured .plan-price{font-size:clamp(38px,6vw,58px)}
+.support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.support-grid span{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 18px 18px 48px;font-weight:800}
+.support-grid span::before{content:"✓";position:absolute;left:18px;top:17px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--aqua2);color:var(--ink);font-size:13px}
+@media(max-width:960px){.support-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.support-grid{grid-template-columns:1fr}}
