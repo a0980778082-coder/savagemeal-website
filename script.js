@@ -22,4 +22,12 @@ async function loadData(){
  if(u){try{const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw new Error(r.status);d=await r.json()}catch(e){console.warn("後台暫時無法讀取，改用備援資料",e)}}
  renderMenu(d.menu||[]);renderFranchise(d.franchise||[]);
 }
+function mountMobileActions(){
+ if(document.querySelector(".mobile-actions"))return;
+ const bar=document.createElement("div");
+ bar.className="mobile-actions";bar.setAttribute("aria-label","快速聯絡");
+ bar.innerHTML='<a class="order" href="https://lin.ee/rSnsTqy" target="_blank" rel="noopener">LINE 點餐</a><a class="call" href="tel:+886422070520">立即打電話</a>';
+ document.body.appendChild(bar);
+}
 loadData();
+mountMobileActions();
