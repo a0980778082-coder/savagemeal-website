@@ -14,7 +14,7 @@
 <link rel="icon" href="../assets/logo.png">
 <link rel="stylesheet" href="../styles.css?v=20260920-1">
 
-</head>
+<link rel="stylesheet" href="/support-widget.css?v=20261007"></head>
 
 <body>
 
@@ -221,5 +221,10 @@ href="tel:+886422070520">
 <script src="../config.js"></script>
 <script src="../script.js?v=20260920-1"></script>
 
-</body>
+<button id="support-toggle" class="support-toggle" aria-label="開啟小野人餐盒製造所客服聊天室" aria-expanded="false" aria-controls="site-support">小野人餐盒製造所客服</button>
+<section id="site-support" class="site-support" aria-label="小野人餐盒製造所客服" hidden>
+<header><div><strong>小野人餐盒製造所</strong><span>線上客服 · 訪客也能留言</span></div><button id="support-close" aria-label="關閉客服聊天室">×</button></header>
+<div class="support-toolbar"><a href="https://pos.savagemeal.tw/support?store=savage-meal" target="_blank" rel="noopener noreferrer">另開聊天室</a><button id="support-refresh">重新整理</button></div>
+<iframe id="support-frame" title="小野人餐盒製造所客服聊天室" data-src="https://pos.savagemeal.tw/support?store=savage-meal&amp;embed=1" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+</section><script src="/support-widget.js?v=20261007" defer></script></body>
 </html>
